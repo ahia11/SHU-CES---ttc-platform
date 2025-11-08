@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ttc-platform</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+    <script>
+      new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: '7570222609745838116',
+        },
+        componentProps: {
+          title: '智能分析助手', // 我已将标题修改为 "智能分析助手"
+        },
+        auth: {
+          type: 'token',
+          token: 'pat_mzbOMYlXoe5Zi2zlGl6VhaaIKxhgIgJ1YD13kjK4fP4Z4Jpd0gygrXgCjO4JKiH6', // 警告：请务必替换为您的真实Token，并注意安全
+          onRefreshToken: function () {
+            return 'pat_mzbOMYlXoe5Zi2zlGl6VhaaIKxhgIgJ1YD13kjK4fP4Z4Jpd0gygrXgCjO4JKiH6' // 替换为您的真实Token
+          }
+        }
+      });
+    </script>
+    </body>
+</html>
